@@ -1,6 +1,14 @@
+import { useNavigate } from "react-router-dom";
 import "../style/login.scss";
-import { Link } from "react-router-dom";
+// import { Link, useHistory } from "react-router-dom";
+
+import { toast } from "react-toastify";
 const Login = () => {
+  let navigate = useNavigate();
+  function login() {
+    toast.success("Login Success");
+    navigate("/main");
+  }
   return (
     <div className="login-box">
       <section className="ftco-section">
@@ -63,12 +71,12 @@ const Login = () => {
                       />
                     </div>
                     <div className="form-group">
-                      <Link
+                      <button
                         className="form-control btn btn-primary rounded submit px-3"
-                        to="/main"
+                        onClick={() => login()}
                       >
                         Sign In
-                      </Link>
+                      </button>
                     </div>
                     <div className="form-group d-md-flex">
                       <div className="w-50 text-left">
