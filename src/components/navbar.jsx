@@ -11,7 +11,17 @@ const NavbarBox = () => {
   return (
     <Navbar bg="dark" variant="dark" expand="lg" sticky="top">
       <Container fluid>
-        <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
+        <Navbar.Brand href="#">
+          {/* Navbar scroll */}
+          <div
+            style={{
+              backgroundImage: "url(images/1548774.png)",
+              width: 30,
+              height: 30,
+              backgroundSize: "contain",
+            }}
+          ></div>
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -35,7 +45,10 @@ const NavbarBox = () => {
               Link
             </Nav.Link>
           </Nav>
-          <Form className="d-flex">
+          <Navbar.Text>
+            Signed in as: <a href="#login">Mark Otto</a>
+          </Navbar.Text>
+          {/* <Form className="d-flex">
             <FormControl
               type="search"
               placeholder="Search"
@@ -43,7 +56,7 @@ const NavbarBox = () => {
               aria-label="Search"
             />
             <Button variant="outline-success">Search</Button>
-          </Form>
+          </Form> */}
         </Navbar.Collapse>
         {/* <Navbar.Collapse className="justify-content-end">
           <Navbar.Text>
